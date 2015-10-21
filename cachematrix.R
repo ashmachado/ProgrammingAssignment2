@@ -22,6 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
   
   getinvmatrix <- function() m
   
+  ##Returning the list of functions.
   list(set = set, get = get, setinvmatrix = setinvmatrix, 
        getinvmatrix = getinvmatrix)
   
@@ -40,6 +41,7 @@ cacheSolve <- function(x) {
   
   if(is.matrix(m)){
     message('Getting the cached inversed matrix')
+    ##Returning the inversed matrix
     return (m)
   }
   
@@ -49,5 +51,6 @@ cacheSolve <- function(x) {
   
   x$setinvmatrix(m)
   
+  ##Returning the inversed matrix
   m
 }
